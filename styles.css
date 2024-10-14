@@ -1,0 +1,119 @@
+/* Corps de la page avec des couleurs sombres unies */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1b1b1b; /* Fond sombre uni */
+    color: #fff; /* Texte blanc pour contraste */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Conteneur principal avec l'effet de flottement et l'ombre 3D */
+.container {
+    background-color: #2a2a2a; /* Fond légèrement plus clair que celui de la page */
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 700px;
+    width: 100%;
+    animation: float 6s ease-in-out infinite; /* Animation de flottement */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); /* Ombre initiale */
+    transition: box-shadow 0.3s ease; /* Transition de l'ombre */
+}
+
+/* Animation du flottement avec variation de l'ombre */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); /* Ombre forte lorsqu'en bas */
+    }
+    50% {
+        transform: translateY(-10px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombre plus légère lorsqu'en haut */
+    }
+    100% {
+        transform: translateY(0);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); /* Retour à l'ombre forte */
+    }
+}
+
+/* Titre central avec typographie soignée */
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #f39c12; /* Accent de couleur orange pour contraster avec le fond sombre */
+    margin-bottom: 20px;
+}
+
+/* Texte explicatif sous le titre */
+p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 40px;
+}
+
+/* Style du bouton de génération avec effets */
+.generate-btn {
+    background-color: #f39c12; /* Bouton d'action avec une couleur vive */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+.generate-btn:hover {
+    background-color: #e67e22; /* Changement de couleur au survol */
+    box-shadow: 0 8px 16px rgba(230, 126, 34, 0.4); /* Effet d'ombre pour plus de dynamisme */
+}
+
+.generate-btn:active {
+    transform: scale(0.95); /* Réduction légère lors du clic */
+}
+
+/* Input pour l'adresse email temporaire */
+.email-box input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #333; /* Fond sombre pour le champ de texte */
+    border: 2px solid #444;
+    border-radius: 8px;
+    color: #eee;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.email-box input:focus {
+    border-color: #f39c12; /* Accentuation du focus sur le champ */
+    outline: none;
+}
+
+/* Indicateur de défilement en bas */
+.scroll-indicator {
+    margin-top: 40px;
+    font-size: 1rem;
+    color: #f39c12;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.scroll-indicator:hover {
+    opacity: 1;
+}
+
+.scroll-indicator:before {
+    content: '↓';
+    display: block;
+    font-size: 2rem;
+}

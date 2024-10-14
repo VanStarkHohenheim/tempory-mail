@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempory Mail</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Tempory Mail</h1>
+        <p>Votre solution d'email temporaire rapide et sécurisé.</p>
+
+        <div class="email-box">
+            <input type="text" id="tempEmail" readonly value="exemple@tempdomain.com">
+        </div>
+
+        <button class="generate-btn" onclick="generateNewEmail()">Générer une nouvelle adresse</button>
+
+        <!-- Indicateur de défilement -->
+        <div class="scroll-indicator">Scroll Down</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
